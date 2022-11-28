@@ -73,7 +73,7 @@ if __name__ == "__main__":
     my_event_handler.on_moved = on_moved
 
     my_observer = Observer()
-    my_observer.schedule(my_event_handler, os.getenv('PATH'), recursive=bool(os.getenv('RECURSIVE')))
+    my_observer.schedule(my_event_handler, os.getenv('LOCAL_PATH'), recursive=bool(os.getenv('RECURSIVE')))
     my_observer.start()
     print('Observer started')
 
