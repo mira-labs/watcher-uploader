@@ -1,3 +1,9 @@
+# Mira watcher
+
+This script is a file watcher which uploads file through SFTP to the remote location defined in the `.env` file or environmental variables``
+
+It should solve the problem of instant changes to files on remote servers when the IDE or text editor does not provide sftp transfer functionality. 
+
 ### `.env` file structure
 `PATTERNS=["*.py", "*.txt", ".flaskenv"]` - array of file name patterns to track
 
