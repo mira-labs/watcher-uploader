@@ -4,6 +4,15 @@ This script is a file watcher which uploads file through SFTP to the remote loca
 
 It should solve the problem of instant changes to files on remote servers when the IDE or text editor does not provide sftp transfer functionality. 
 
+### Setup
+
+```shell
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python main.py
+```
+
 ### `.env` file structure
 `PATTERNS=["*.py", "*.txt", ".flaskenv"]` - array of file name patterns to track
 
