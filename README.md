@@ -22,7 +22,7 @@ python main.py
 
 `RECURSIVE=True` - Should the watcher look into subdirectories as well?
 
-`PATH="."` - which folder should be watched
+`PATH="."` - which folder should be watched?
 
 `REMOTE_PATH="/remote/path/on/the/server"` - path on the server the files will be uploaded to
 
