@@ -12,7 +12,6 @@ from watchdog.observers import Observer
 # Code of the application, which uses environment variables
 # (e.g. from `os.environ` or `os.getenv`) as if they came from the actual environment.
 load_dotenv()
-CWD = os.getcwd()
 
 
 def current_time():
@@ -73,9 +72,8 @@ if __name__ == "__main__":
     my_event_handler.on_modified = on_modified
     my_event_handler.on_moved = on_moved
 
-    go_recursively = True
     my_observer = Observer()
-    my_observer.schedule(my_event_handler, os.getenv('PATH'), recursive=go_recursively)
+    my_observer.schedule(my_event_handler, os.getenv('PATH'), recursive=bool(os.getenv('RECURSIVE')))
     my_observer.start()
     print('Observer started')
 

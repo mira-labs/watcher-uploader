@@ -11,6 +11,8 @@ It should solve the problem of instant changes to files on remote servers when t
 
 `CASE_SENSITIVE=True` - should the watcher be case-sensitive?
 
+`RECURSIVE=True` - Should the watcher look into subdirectories as well?
+
 `PATH="."` - which folder should be watched
 
 `REMOTE_PATH="/remote/path/on/the/server"` - path on the server the files will be uploaded to
