@@ -8,20 +8,26 @@ from dotenv import load_dotenv
 from watchdog.events import PatternMatchingEventHandler
 from watchdog.observers import Observer
 
-# Take environment variables from .env
+# Takes environment variables from .env
 # Code of the application, which uses environment variables
 # (e.g. from `os.environ` or `os.getenv`) as if they came from the actual environment.
-
 load_dotenv()
 CWD = os.getcwd()
 
 
 def current_time():
+    """Takes current time and returns formatted output for logging purposes"""
     cur_time = datetime.now()
     return "[" + cur_time.strftime('%Y-%m-%d %H:%M:%S') + "]: "
 
 
 def upload(file: str):
+    """Uploads a file through SFTP
+    Parameters
+        ----------
+        file : str
+            The name of the file
+            """
     print(current_time() + 'Uploading file: ' + file)
     try:
         cnopts = pysftp.CnOpts()
